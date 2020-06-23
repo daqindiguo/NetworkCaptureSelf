@@ -52,7 +52,6 @@ public final class CaptureInfoInterceptor implements Interceptor {
         captureEntity.requestMethod = requestStartMessage;
         captureEntity.requestUrl = request.url().toString();
 
-
         StringBuffer headerBuffer = new StringBuffer();
         if (hasRequestBody) {
             if (requestBody.contentType() != null) {
