@@ -36,17 +36,17 @@ public class GetCaptureDataUtils {
                 List<CaptureContentAdapter.Entity> list = new ArrayList<>();
                 if(captureEntity == null) return list;
 
-                list.add(new CaptureContentAdapter.Entity("请求方式",captureEntity.requestMethod));
+//                list.add(new CaptureContentAdapter.Entity("请求方式",captureEntity.requestMethod));
                 list.add(new CaptureContentAdapter.Entity("请求URL",captureEntity.requestUrl));
-                if(!TextUtils.isEmpty(captureEntity.requestHeader)) {
-                    list.add(new CaptureContentAdapter.Entity("请求Header", captureEntity.requestHeader));
-                }
+//                if(!TextUtils.isEmpty(captureEntity.requestHeader)) {
+//                    list.add(new CaptureContentAdapter.Entity("请求Header", captureEntity.requestHeader));
+//                }
                 if(!TextUtils.isEmpty(captureEntity.requestBody)){
-                    list.add(new CaptureContentAdapter.Entity("请求体",captureEntity.requestBody));
+                    list.add(new CaptureContentAdapter.Entity("请求体",formatJson(captureEntity.requestBody)));
                 }
 
                 list.add(new CaptureContentAdapter.Entity("响应状态",captureEntity.responseStatus));
-                list.add(new CaptureContentAdapter.Entity("响应Header",captureEntity.responseHeader));
+//                list.add(new CaptureContentAdapter.Entity("响应Header",captureEntity.responseHeader));
 
 
                 list.add(new CaptureContentAdapter.Entity("响应体",formatJson(captureEntity.responseBody)));
